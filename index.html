@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anon - eCommerce Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg-body-tertiary {
+      background-color: #000000;
+      /* Background color for the top notification bar */
+    }
+
+    .text-slide .navbar-text {
+      color: white;
+      font-size: 0.9rem;
+      /* Adjust font size */
+      padding: 5px 0;
+    }
+
+    /*fdjh*/
+    .text-slide {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+    }
+
+    .slide-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 1rem;
+      position: absolute;
+      animation: slide 10s linear infinite;
+    }
+
+    .slide-text:nth-child(2) {
+      animation-delay: 5s;
+      /* Starts the second text 5 seconds after the first */
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .slide-text {
+        font-size: 0.8rem;
+        /* Adjusted font size for smaller screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slide-text {
+        font-size: 0.7rem;
+        /* Adjusted font size for smaller screens */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .slide-text {
+        font-size: 0.6rem;
+        /* Adjusted font size for smallest screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary" style="margin: 0; padding: 0;">
+    <div class="container-fluid d-flex justify-content-center text-slide" style="background-color: #000000;">
+      <!-- First Sliding Text -->
+      <span class="navbar-text text-white text-center slide-text">
+        Use Code NEW10 and get 10% OFF* on non-discounted Watches over Rs. 2499. Maximum Discount: Rs. 1200.
+        T&C Apply*.
+      </span>
+      <!-- Second Sliding Text -->
+      <span class="navbar-text text-white text-center slide-text nth-child(2)">
+        Hurry up! Limited stock available for this exclusive offer. Shop now!
+      </span>
+    </div>
+  </nav>
+  <!--
+    - HEADER
+  -->
+  <header>
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo/titan-logo.svg" alt="Anon's logo" width="120" height="36">
+        </a>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder=" &nbsp; &nbsp;Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="#" class="menu-title">Men</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Women</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Smart Watches</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Premium Watches</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Watches</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">International Brands</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Gifting</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Sale</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Watch Care</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">More</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Shorts & Jeans</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Safety Shoes</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Wallet</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Women's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Dress & Frock</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Earrings</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Necklace</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Makeup Kit</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Jewelry</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Earrings</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Couple Rings</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Necklace</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Bracelets</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Perfume</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Clothes Perfume</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Deodorant</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Flower Fragrance</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Air Freshener</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Blog</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Hot Offers</a>
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+
+          <li class="menu-category">
+
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">English</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Espa&ntilde;ol</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Fren&ccedil;h</a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">USD &dollar;</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">EUR &euro;</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+  <!--
+    - MAIN
+  -->
+  <main>
+    <!--
+      - BANNER
+    -->
+    <div class="banner">
+      <div class="">
+        <div class="slider-container has-scrollbar">
+          <div class="slider-item">
+            <img src="./assets/images/BestSellers_HDFC_PLP_D (1).webp" alt="women's latest fashion sale"
+              class="banner-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      - CATEGORY
+    -->
+    <div class="category">
+      <div class="container">
+        <div class="category-item-container has-scrollbar">
+          <div class="category-item">
+            <div class="category-img-box">
+              <img src="./assets/images/icons/jacket.svg" alt="jacket" width="30">
+            </div>
+            <div class="category-content-box">
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Jacket</h3>
+                <p class="category-item-amount">(16)</p>
+              </div>
+              <a href="#" class="category-btn">Show all</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="category-img-box">
+              <img src="./assets/images/icons/watch.svg" alt="watch" width="30">
+            </div>
+            <div class="category-content-box">
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Watch</h3>
+                <p class="category-item-amount">(27)</p>
+              </div>
+              <a href="#" class="category-btn">Show all</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="category-img-box">
+              <img src="./assets/images/icons/hat.svg" alt="hat & caps" width="30">
+            </div>
+            <div class="category-content-box">
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Hat & caps</h3>
+                <p class="category-item-amount">(39)</p>
+              </div>
+              <a href="#" class="category-btn">Show all</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+      <div class="container">
+        <h6>
+          Best Selling Watches &nbsp;
+          <span class="muted-text">365 items</span>
+        </h6>
+        <br>
+        <div class="product-box">
+          <!--
+            - PRODUCT GRID
+          -->
+          <!-- <div class="container py-5"></div> -->
+          <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center">
+                <img src="/assets/icons/1806NM01_1.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: left;">Best Seller</h5>
+                  <h5 class="card-title" style="text-align: left;">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted" style="text-align: left;">Men's Watch</p>
+                  <p class="price" style="text-align: left;">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/1713BM02_1.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/1639SM02_1.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/2608QM02_1.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container py-5"></div> -->
+            <!-- <div class="row"> -->
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center">
+                <img src="/assets/icons/5.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
+                    Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/6.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/7.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/8.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container py-5"></div> -->
+            <!-- <div class="row"> -->
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center">
+                <img src="/assets/icons/9.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
+                    Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/10.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/11.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/12.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <div class="container py-5"></div> -->
+            <!-- <div class="row"> -->
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center">
+                <img src="/assets/icons/13.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
+                    Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted" style="text-align: left;">Men's Watch</p>
+                  <p class="price" style="text-align: left;">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/14.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/15.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/16.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container py-5"></div> -->
+            <!-- <div class="row"> -->
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/17.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/18.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/21.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/22.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/23.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/24.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/25.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/26.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/27.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/28.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/29.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/30.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/31.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/32.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/33.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/34.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/35.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/36.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/37.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/38.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/39.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/40.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/41.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/42.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/43.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/44.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/45.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/46.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/47.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/48.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/49.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/50.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/51.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/52.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/53.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/54.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/17.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/18.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/21.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/22.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/23.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/24.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/25.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/26.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/27.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/28.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/29.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/30.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/31.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/32.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-sm-6" style="border: none;">
+              <div class="card text-center">
+                <img src="/assets/icons/33.jpg" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
+                    Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/34.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/35.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-start">
+                <img src="/assets/icons/36.webp" class="card-img-top" alt="Watch">
+                <div class="card-body">
+                  <h5 class="card-title">Best Seller</h5>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
+                    and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+    </div>
+    </div>
+  </main>
+
+
+
+  <div class="features-container">
+    <div class="feature-item">
+      <img src="/assets/icons/icon 1.svg" alt="100% Original">
+      <p>100% ORIGINAL</p>
+    </div>
+    <div class="feature-item">
+      <img src="/assets/icons/icon 2.svg" alt="7 Day Return">
+      <p>7 DAY RETURN</p>
+    </div>
+    <div class="feature-item">
+      <img src="/assets/icons/icon 3.svg" alt="Free Shipping">
+      <p>FREE SHIPPING</p>
+    </div>
+  </div>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
