@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anon - eCommerce Website</title>
+  <title>Titan E-Commerce Website</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/icons/titan mini logo.png" type="image/x-icon">
 
   <!--
     - custom css link
@@ -131,7 +131,8 @@
           <img src="./assets/images/logo/titan-logo.svg" alt="Anon's logo" width="120" height="36">
         </a>
         <div class="header-search-container">
-          <input type="search" name="search" class="search-field" placeholder=" &nbsp; &nbsp;Enter your product name...">
+          <input type="search" name="search" class="search-field"
+            placeholder=" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Enter your product name...">
           <button class="search-btn">
             <ion-icon name="search-outline"></ion-icon>
           </button>
@@ -142,11 +143,11 @@
           </button>
           <button class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
-            <span class="count">0</span>
+            <!-- <span class="count">0</span> -->
           </button>
           <button class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
+            <!-- <span class="count">0</span> -->
           </button>
         </div>
       </div>
@@ -452,23 +453,76 @@
     - MAIN
   -->
   <main>
+
+    <div class="location-container">
+      <img src="/assets/icons/location.svg" alt="Location Icon">
+      <span>Select a location to see product availability</span>
+  </div>
+    <br>
+    <div class="breadcrumb">
+      <a href="#" style="padding-left: 80px;">Home</a>
+      <span>&gt;</span>
+      <a href="#">BestSellers</a>
+  </div>
     <!--
       - BANNER
     -->
-    <div class="banner">
-      <div class="">
-        <div class="slider-container has-scrollbar">
-          <div class="slider-item">
-            <img src="./assets/images/BestSellers_HDFC_PLP_D (1).webp" alt="women's latest fashion sale"
-              class="banner-img">
-          </div>
-        </div>
+
+    <div class="hero-image">
+      <div class="hero-text">
       </div>
     </div>
     <!--
       - CATEGORY
     -->
-    <div class="category">
+    <table>
+      <tr style="background-color: #FAFAFA; padding-top: 20px;">
+        <th style="text-align: center;">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="/assets/icons/1st.svg" alt="Appointment Icon"
+              style="margin-right: 5px; width: 20px; height: 20px;">
+            &nbsp; Book An Appointment
+          </div>
+        </th>
+        <th style="text-align: center;">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="/assets/icons/2nd.svg" alt="EMI Icon" style="margin-right: 5px; width: 20px; height: 20px;">
+            &nbsp; Buy With No Cost EMI
+          </div>
+        </th>
+        <th style="text-align: center; color: #6c757d;">
+          <div style="display: flex; align-items: center; justify-content: center; color: #6c757d;">
+            <img src="/assets/icons/3rd.webp" alt="Pickup Icon" style="margin-right: 5px; width: 20px; height: 20px;">
+            &nbsp; Pickup At The Store
+          </div>
+        </th>
+      </tr>
+    </table>
+
+    <div class="filter-sort-container">
+      <div class="filter-section">
+        <label>Filter By <br>Gender</label>
+        <button class="filter-btn">Men</button>
+        <button class="filter-btn">Women</button>
+        <button class="filter-btn">Unisex</button>
+        <button class="filter-btn">Couple</button>
+      </div>
+      <div class="sort-section">
+        <button class="filter-icon-btn">
+          <img src="/assets/icons/filter-icon.webp" alt="Filter Icon"
+            style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+          <span>Show Filters</span>
+        </button>
+
+        <select class="sort-dropdown">
+          <option value="best-sellers">Sort By: Best Sellers</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="newest">Newest Arrivals</option>
+        </select>
+      </div>
+    </div>
+    <!-- <div class="category">
       <div class="container">
         <div class="category-item-container has-scrollbar">
           <div class="category-item">
@@ -509,46 +563,74 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!--
       - PRODUCT
     -->
 
-    <div class="product-container">
+    <div class="product-container ">
       <div class="container">
-        <h6>
+        <h6 style="text-align: justify; padding-top: 30px;">
           Best Selling Watches &nbsp;
           <span class="muted-text">365 items</span>
         </h6>
         <br>
-        <div class="product-box">
+        <div class="product-box ">
           <!--
             - PRODUCT GRID
           -->
-          <!-- <div class="container py-5"></div> -->
           <div class="row">
-            <!-- Product 1 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-center">
-                <img src="/assets/icons/1806NM01_1.webp" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/1.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5 (130)</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title" style="text-align: left;">Best Seller</h5>
-                  <h5 class="card-title" style="text-align: left;">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted" style="text-align: left;">Men's Watch</p>
-                  <p class="price" style="text-align: left;">₹ 3,995</p>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
+
+
+
             <!-- Product 2 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/1713BM02_1.jpg" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/2.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5 (183)</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
@@ -556,12 +638,25 @@
             </div>
             <!-- Product 3 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/1639SM02_1.webp" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/3.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/1.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5 (130)</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
@@ -569,615 +664,1216 @@
             </div>
             <!-- Product 4 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/2608QM02_1.webp" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/4.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5 (137)</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="container py-5"></div> -->
-            <!-- <div class="row"> -->
-            <!-- Product 1 -->
+
+            <!-- Product 5 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-center">
-                <img src="/assets/icons/5.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
-                    Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/a6.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5 (46)</span>
                 </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/6.webp" class="card-img-top" alt="Watch">
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/7.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/8.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="container py-5"></div> -->
-            <!-- <div class="row"> -->
-            <!-- Product 1 -->
+            <!-- Product 6 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-center">
-                <img src="/assets/icons/9.webp" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/a7.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
-                    Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 7 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/10.webp" class="card-img-top" alt="Watch">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/a8.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 8 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/a9.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Product 9 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/a11.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/b11.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/11.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 12 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/12.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-
-            <!-- <div class="container py-5"></div> -->
-            <!-- <div class="row"> -->
-            <!-- Product 1 -->
+            <!-- Product 13 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-center">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/13.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black
-                    Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted" style="text-align: left;">Men's Watch</p>
-                  <p class="price" style="text-align: left;">₹ 3,995</p>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 14 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/14.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 14 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/15.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 15 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/16.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="container py-5"></div> -->
-            <!-- <div class="row"> -->
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+
+            <!-- Product 16 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/17.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 17 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/18.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 18 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 19 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 20 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/21.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 21 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/22.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 22 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/23.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 23 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/24.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 24 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/25.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 25 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/26.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 26 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/27.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 27 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/28.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 28 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/29.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 29 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/30.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 30 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/31.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 31 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/32.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 32 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/33.jpg" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
                 </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/34.webp" class="card-img-top" alt="Watch">
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/35.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/36.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 33 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/34.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 34 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/35.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 35 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/36.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                  <p class="text-muted">Men's Watch</p>
+                  <p class="price">₹ 3,995</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 36 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/37.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 37 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/38.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 38 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/39.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 39 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/40.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 40 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/41.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 41 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/42.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 42 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/43.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 43 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/44.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <!-- Product 44 -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/45.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 2 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/46.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 3 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/47.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 4 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/48.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
@@ -1185,53 +1881,107 @@
             </div>
 
             <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/49.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 2 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/50.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 3 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/51.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 4 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/52.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
@@ -1239,483 +1989,312 @@
             </div>
 
             <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
+            <div class="col-md-3 col-sm-6">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/53.webp" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
+                </div>
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
+
             <!-- Product 2 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
                 <img src="/assets/icons/54.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
                 </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
-                <img src="/assets/icons/17.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/18.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
             <!-- Product 3 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/19.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+                <!-- Product image -->
+                <img src="/assets/icons/55.jpg" class="card-img-top" alt="Watch">
+
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
                 </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/20.webp" class="card-img-top" alt="Watch">
+
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
-                <img src="/assets/icons/21.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/22.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/23.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
             <!-- Product 4 -->
             <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/24.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
+              <div class="card text-center position-relative">
+                <!-- Top left icon -->
+                <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+                <!-- Top right icon -->
+                <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
-                <img src="/assets/icons/25.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/26.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/27.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/28.jpg" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
+                <!-- Product image -->
+                <img src="/assets/icons/56.webp" class="card-img-top" alt="Watch">
 
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
-                <img src="/assets/icons/29.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
+                <!-- Rating icon and text on the product image -->
+                <div class="icon-on-image">
+                  <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                  <span class="rating-number">4.5</span>
                 </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/30.webp" class="card-img-top" alt="Watch">
                 <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/31.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/32.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 1 -->
-            <div class="col-md-3 col-sm-6" style="border: none;">
-              <div class="card text-center">
-                <img src="/assets/icons/33.jpg" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined
-                    Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/34.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/35.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
-                  <p class="text-muted">Men's Watch</p>
-                  <p class="price">₹ 3,995</p>
-                </div>
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card text-start">
-                <img src="/assets/icons/36.webp" class="card-img-top" alt="Watch">
-                <div class="card-body">
-                  <h5 class="card-title">Best Seller</h5>
-                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial
-                    and Metal Strap</h5>
+                  <!-- <h5 class="card-title">Best Seller</h5> -->
+                  <p class="best-seller">Best Seller</p>
+                  <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
                   <p class="text-muted">Men's Watch</p>
                   <p class="price">₹ 3,995</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- Product 1 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center position-relative">
+              <!-- Top left icon -->
+              <img src="/assets/icons/compare.svg" class="icon-top-left" alt="Icon 1">
+              <!-- Top right icon -->
+              <img src="/assets/icons/heart.webp" class="icon-top-right" alt="Icon 2">
+
+              <!-- Product image -->
+              <img src="/assets/icons/57.webp" class="card-img-top" alt="Watch">
+
+              <!-- Rating icon and text on the product image -->
+              <div class="icon-on-image">
+                <img src="/assets/icons/icon-ratings-start.svg" class="rating-star" alt="Rating Star">
+                <span class="rating-number">4.5 </span>
+              </div>
+
+              <div class="card-body">
+                <!-- <h5 class="card-title">Best Seller</h5> -->
+                <p class="best-seller">Best Seller</p>
+                <h5 class="card-title">Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</h5>
+                <p class="text-muted">Men's Watch</p>
+                <p class="price">₹ 3,995</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </main>
 
 
+  <div class="container">
+    <div class="features">
+      <div class="feature-item">
+        <img src="/assets/icons/icon 1.svg" alt="100% Original">
+        <p>100% ORIGINAL</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/icons/icon 2.svg" alt="7 Day Return">
+        <p>7 DAY RETURN</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/icons/icon 3.svg" alt="Free Shipping">
+        <p>FREE SHIPPING</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
 
-  <div class="features-container">
-    <div class="feature-item">
-      <img src="/assets/icons/icon 1.svg" alt="100% Original">
-      <p>100% ORIGINAL</p>
-    </div>
-    <div class="feature-item">
-      <img src="/assets/icons/icon 2.svg" alt="7 Day Return">
-      <p>7 DAY RETURN</p>
-    </div>
-    <div class="feature-item">
-      <img src="/assets/icons/icon 3.svg" alt="Free Shipping">
-      <p>FREE SHIPPING</p>
-    </div>
+  <div class="container" style="background-color: #FDFAF5;">
+    <h2>LOGIN FOR THE BEST EXPERIENCE</h2>
+    <button class="login-btn">LOGIN NOW</button>
+    <a href="#" class="create-account">Create An Account</a>
+  </div>
+  <!-- <br>
+<br> -->
+
+  <div class="container">
+    <h5>BEST SELLING WATCHES PRICE LIST</h5>
+    <table>
+      <tr>
+        <th style="text-align: justify; font-weight: 500;">Best Selling Watches</th>
+        <th class="" style="text-align: end; font-weight: 500;">Price (Rs)</th>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Men's Timeless Style Watch: Refined Black Dial and Metal Strap</td>
+        <td class="price">₹ 3,995</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Men's Multifunction Karishma: Two-Tone Steel Elegance Watch</td>
+        <td class="price">₹ 3,585</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Men's Elegance Watch: Black Dial with Sleek Link Strap</td>
+        <td class="price">₹ 1,995</td>
+      </tr>
+      <tr class="border-text">
+        <td>Raga Women's Allure: Brown Dial with Designer Metal Strap Watch</td>
+        <td class="price">₹ 5,995</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Karishma Quartz Analog Green Dial Stainless Steel Strap Watch for Men</td>
+        <td class="price">₹ 3,095</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Neo Splash Quartz Multifunction Black Dial Stainless Steel Strap Watch for Men</td>
+        <td class="price">₹ 7,345</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Women's Lagan Watch: Rose Gold Accents & Refined Elegance</td>
+        <td class="price">₹ 2,835</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Men's Trendsetter Watch: Chic Blue Dial & Two-Tone Strap</td>
+        <td class="price">₹ 3,995</td>
+      </tr>
+      <tr class="border-text">
+        <td>Titan Workwear Green Dial Analog Leather Strap Watch for Men</td>
+        <td class="price"></td>
+      </tr>
+      <tr class="">
+        <td>Raga Women's Allure: Brown Dial with Designer Metal Strap Watch</td>
+        <td class="price">₹ 3,375</td>
+      </tr>
+    </table>
+    <p style="text-align: justify; font-style: italic; font-weight: 500; font-size: .8125rem;">Data last updated on
+      12/09/2024</p>
   </div>
 
   <!--
     - FOOTER
   -->
 
-  <footer>
-
-
-
+  <footer style="background-color: black;">
     <div class="footer-nav">
-
       <div class="container">
-
         <ul class="footer-nav-list">
-
           <li class="footer-nav-item">
-            <h2 class="nav-title">Popular Categories</h2>
+            <h2 class="nav-title">COLLECTIONS</h2>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Fashion</a>
+            <a href="#" class="footer-nav-link">Titan Automatics</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Electronic</a>
+            <a href="#" class="footer-nav-link"> Police Batman</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cosmetic</a>
+            <a href="#" class="footer-nav-link">Raga Power Pearls</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Health</a>
+            <a href="#" class="footer-nav-link"> Nebula Jewels</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Watches</a>
+            <a href="#" class="footer-nav-link">Grandmaster</a>
           </li>
-
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Maritime</a>
+          </li>
         </ul>
-
         <ul class="footer-nav-list">
-
           <li class="footer-nav-item">
-            <h2 class="nav-title">Products</h2>
+            <h2 class="nav-title">CUSTOMER SERVICE
+            </h2>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
+            <a href="#" class="footer-nav-link">Payment Options</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
+            <a href="#" class="footer-nav-link">Track Order</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
+            <a href="#" class="footer-nav-link">Encircle Program</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
+            <a href="#" class="footer-nav-link">Find Titan World Stores</a>
           </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
-          </li>
-
         </ul>
-
         <ul class="footer-nav-list">
-
           <li class="footer-nav-item">
-            <h2 class="nav-title">Our Company</h2>
+            <h2 class="nav-title">CONTACT US
+            </h2>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Delivery</a>
+            <a href="#" class="footer-nav-link">1800-266-0123</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Legal Notice</a>
+            <a href="#" class="footer-nav-link">customercare@titan.co.in</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Terms and conditions</a>
+            <a href="#" class="footer-nav-link">Help & Contact</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">About us</a>
+            <a href="#" class="footer-nav-link">FAQs</a>
           </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Secure payment</a>
-          </li>
-
         </ul>
-
         <ul class="footer-nav-list">
-
           <li class="footer-nav-item">
-            <h2 class="nav-title">Services</h2>
+            <h2 class="nav-title">ABOUT TITAN
+            </h2>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
+            <a href="#" class="footer-nav-link">Brand Protection</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
+            <a href="#" class="footer-nav-link">Corporate</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
+            <a href="#" class="footer-nav-link">Careers</a>
           </li>
-
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
+            <a href="#" class="footer-nav-link">Blog</a>
           </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
-          </li>
-
         </ul>
-
         <ul class="footer-nav-list">
 
           <li class="footer-nav-item">
-            <h2 class="nav-title">Contact</h2>
+            <h2 class="nav-title">Download Titan World App</h2>
           </li>
 
           <li class="footer-nav-item flex">
@@ -1790,17 +2369,15 @@
     </div>
 
     <div class="footer-bottom">
-
-      <div class="container">
-
-        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
-
-        <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
-        </p>
-
+      <div class="container" style="border-top: 2px solid #666666; padding-top: 21px;">
+        <div class="footer-content">
+          <p class="copyright">
+            © 2024 Titan Company Limited. All Rights Reserved. &nbsp; | &nbsp; Terms & Conditions &nbsp;| &nbsp; Privacy
+            Policy &nbsp; | &nbsp; Wearable Privacy Policy
+          </p>
+          <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+        </div>
       </div>
-
     </div>
 
   </footer>
