@@ -133,6 +133,32 @@ body {
   /* width: 100px; */
 }
 
+.full-width-feature-container {
+  background-color: #FAFAFA;
+  width: 100% !important;
+  /* Full screen width */
+  padding: 50px 0;
+  /* Optional padding for top and bottom */
+}
+
+.full-width-container {
+  background-color: #FDFAF5;
+  width: 100% !important;
+  /* Full screen width */
+  padding: 50px 0;
+  /* Optional padding for top and bottom */
+}
+
+.container {
+  max-width: 1200px;
+  /* You can adjust this based on your design */
+  margin: 0 auto;
+  /* Center the content */
+  text-align: center;
+  /* Center the text */
+}
+
+
 h2 {
   font-size: 1.875rem;
   margin-bottom: 20px;
@@ -186,22 +212,6 @@ h2 {
   }
 }
 
-
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-} */
-
-/* .container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: white;  */
-/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-/* } */
-
 h5 {
   text-align: start;
   font-size: 1.2rem;
@@ -221,8 +231,14 @@ th,
 td {
   text-align: left;
   padding: 10px;
-  font-size: 16px;
+  
   border-bottom: 1px solid #ddd;
+  
+}
+
+.write{
+  font-weight: 400;
+  font-size: .875rem;
 }
 
 th {
@@ -230,13 +246,14 @@ th {
 }
 
 td {
-  color: #555;
+  color: #666;
 }
 
 td.price {
   text-align: right;
-  color: #555;
-  font-weight: 500;
+  color: #666;
+  font-weight: 400;
+  font-size: .875rem;
 }
 
 /* Responsive design */
@@ -276,11 +293,6 @@ td.price {
   padding-bottom: 10px;
 }
 
-/* body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-} */
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/banner.webp");
@@ -307,12 +319,6 @@ th {
   height: 70px;
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #fff8f1;
-  margin: 0;
-  padding: 0;
-} */
 
 .filter-sort-container {
   display: flex;
@@ -520,4 +526,101 @@ th {
 .breadcrumb span {
   margin: 0 5px;
   color: #ccc;
+}
+
+.footer-bottom {
+  background-color: #000;
+  /* Background color */
+  color: #fff;
+  /* Text color */
+  padding: 20px 0;
+  border-top: 2px solid #666666;
+}
+
+.footer-bottom .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.footer-content .payment-img {
+  order: 1;
+  /* Ensure image is on the left */
+  width: auto;
+  max-height: 50px;
+  /* Adjust the size of the payment icons */
+}
+
+.footer-content p {
+  order: 2;
+  /* Ensure text is on the right */
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  text-align: right;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-content .payment-img,
+  .footer-content p {
+    order: unset;
+    margin-top: 10px;
+  }
+
+  .footer-content p {
+    text-align: center;
+  }
+}
+
+
+.full-width-feature-container {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  /* You can adjust the width if needed */
+}
+
+.feature-item img {
+  margin-bottom: 10px;
+  /* Adjust the spacing between icon and text */
+}
+
+.feature-item p {
+  font-size: 14px;
+  margin: 0;
 }

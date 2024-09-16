@@ -1302,12 +1302,18 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: var(--sonic-silver);
-  font-size: var(--fs-7);
+  /* color: var(--sonic-silver); */
+  /* font-size: var(--fs-7); */
   text-transform: capitalize;
-  -webkit-transition: var(--transition-timing);
+  /* -webkit-transition: var(--transition-timing);
   -o-transition: var(--transition-timing);
-  transition: var(--transition-timing);
+  transition: var(--transition-timing); */
+  font: normal normal normal .75rem / 1.125rem "Poppins", sans-serif;
+  color: #f8f8f8 !important;
+  text-transform: capitalize;
+  opacity: .85;
+  margin-bottom: .625rem;
+  text-decoration: none !important;
 }
 
 .footer-nav-link:hover {
