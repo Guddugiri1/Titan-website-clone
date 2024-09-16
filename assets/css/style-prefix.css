@@ -1284,7 +1284,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: var(--salmon-pink);
+  /* background: var(--salmon-pink); */
   width: 60px;
   height: 1px;
 }
@@ -1829,7 +1829,7 @@ footer {
   }
 
   .header-social-container .social-link:hover {
-    background: var(--salmon-pink);
+    /* background: var(--salmon-pink); */
     color: var(--white);
   }
 
@@ -1914,7 +1914,7 @@ footer {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--salmon-pink);
+    /* background: var(--salmon-pink); */
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);

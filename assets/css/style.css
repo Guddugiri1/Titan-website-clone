@@ -345,8 +345,8 @@ th {
 }
 
 .filter-btn {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #fff;
+  border: 1px solid #ededed;
   border-radius: 5px;
   padding: 8px 16px;
   cursor: pointer;
@@ -355,7 +355,7 @@ th {
 }
 
 .filter-btn:hover {
-  background-color: #eee;
+  background-color: #FFF8F1;
   border-color: #ccc;
 }
 
@@ -369,8 +369,8 @@ th {
 }
 
 .filter-icon-btn {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #fff;
+  border: 1px solid #ededed;
   border-radius: 5px;
   padding: 8px 16px;
   cursor: pointer;
@@ -381,8 +381,8 @@ th {
 }
 
 .filter-icon-btn:hover {
-  background-color: #eee;
-  border-color: #ccc;
+  background-color: #FFF8F1;
+  border-color: #d4d4d4;
 }
 
 .sort-dropdown {
